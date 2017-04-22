@@ -1,0 +1,15 @@
+head
+  link(rel='stylesheet', href='/stylesheets/teamPick.css')
+  script(type='text/javascript', src='/javascripts/teamPick.js')
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+
+body
+  h1= "Choose team!"
+  div#pinkBox(onclick="chooseTeam('p')")
+    div.middle
+      div.inner
+        p#pinkBoxText Pink
+  div#blueBox(onclick="chooseTeam('b')")
+    div.middle
+      div.inner
+        p#blueBoxText Blue
