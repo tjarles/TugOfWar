@@ -6,21 +6,21 @@ function setTeam(teamColor) {
     var oppositeTeamColor = null;
     var operator = null;
     if (teamColor == "pink") {
-        oppositeTeamColor = "blue"
+        oppositeTeamColor = "blue";
         operator = "p";
     } else {
-        oppositeTeamColor = "pink"
+        oppositeTeamColor = "pink";
         operator = "m";
     }
+
+    $("#"+ teamColor +"Box").css("display", "block");
+    //document.getElementById(teamColor + "Box").style.display = 'block';
+
     document.getElementById(teamColor + "Box").style.height = "100%";
     document.getElementById(oppositeTeamColor + "Box").style.display = 'none';
     //document.getElementById(teamColor + "Box").onclick = post("m");
     document.getElementById(teamColor + "Box").setAttribute("onClick", "post('" + operator + "');");
     document.getElementById("banner").innerHTML = 'Change Team';
-}
-
-function blueTeamView() {
-
 }
 
 //////////////////////////
@@ -36,14 +36,7 @@ function post(team) {
     });
 }
 
-/*function updateDOM(value) {
-    //console.log("update: " + value);
-    $('#value').text(value);
-    moveLine(value);
-}*/
-
 function chooseTeam(team) {
-    console.log("Valde: " + team);
     if (team == "p") {
         post("pink");
         setTeam("pink");
@@ -51,9 +44,21 @@ function chooseTeam(team) {
         post("blue");
         setTeam("blue");
     }
+}
 
-    //post(data).done(updateDOM);
-    //post(data);
+function changeTeam() {
+    var banner = $("#banner".text);
+    //If no team has been chosen
+    if (banner == "Choose team!") {
+        return;
+    } else {
+        var pinkExpanded = $("#pinkBox").css("display");
+        if (pinkExpanded == "block") {
+            setTeam("blue");
+        } else {
+            setTeam("pink");
+        }
+    }
 }
 
 

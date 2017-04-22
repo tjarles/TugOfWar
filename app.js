@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var game = require('./routes/game');
+var client = require('./routes/client');
 
 var app = express();
 var port = 8080;
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/game', game);
+app.use('/client', client);
 
 app.use(bodyParser.urlencoded({extended : true}));
 
