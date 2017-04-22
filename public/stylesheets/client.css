@@ -1,0 +1,29 @@
+/*body {
+  background: #EB1E56;
+}*/
+
+#pinkBox {
+  background-color: #EB1E56;
+  height: 50%;
+  width: 100%;
+}
+
+#pinkBoxText {
+  display: table;
+  margin: 0 auto;
+}
+
+#blueBox {
+  background-color: #0D2331;
+  height: 50%;
+  width: 100%;
+}
+
+#blueBoxText {
+  display: table;
+  margin: 0 auto;
+}
+
+a {
+  color: #00B7FF;
+}
