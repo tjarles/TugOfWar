@@ -6,10 +6,11 @@ var count = startingValue;
 
 var pinkPlayers = 0;
 var bluePlayers = 0;
+var winningTeam = "";
 
 //Shows counter at start
 router.get('/', function (req, res) {
-    res.render('game', {val: count});
+    res.render('game', {winningTeam: winningTeam});
 });
 
 //Handles POST-requests

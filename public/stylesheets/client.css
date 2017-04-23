@@ -2,6 +2,12 @@
   background: #EB1E56;
 }*/
 
+#banner {
+  color: white;
+  background-color: #0D2331;
+  margin: 0;
+}
+
 #pinkBox {
   background-color: #EB1E56;
   height: 50%;
@@ -22,6 +28,11 @@
 #blueBoxText {
   display: table;
   margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  text-align: center;
 }
 
 a {

@@ -28,7 +28,7 @@ function setTeam(teamColor) {
 //////////////////////////
 
 function post(team) {
-    console.log("Sending: '" + team + "' from client");
+    //console.log("Sending: '" + team + "' from client");
     return $.ajax({
         type: 'POST',
         url: 'http://localhost:8080/game',

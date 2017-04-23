@@ -1,18 +1,21 @@
 head
   link(rel='stylesheet', href='/stylesheets/game.css')
-  script(type='text/javascript', src='/javascripts/game.js')
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(type='text/javascript', src='/javascripts/game.js')
 
 body
+  h1#countdownNr.centerText #{countdownNr}
+  h1.centerText.bounce #{winningTeam}
   div#pink
-    h1= "pink square/team"
-    //For testing
-    //p#value count: #{val}
-    a(onclick="postHandler('p')")
-      button(type="button") +
-    a(onclick="postHandler('m')")
-      button(type="button") -
-    a(onclick="postHandler('r')")
-      button(type="button") Reset
-    a(onclick="main()")
-      button(type="button") Start
+    //h1#pinkPlayerCount=
+    //h1= "pink square/team"
+    ////For testing
+    ////p#value count: #{val}
+    //a(onclick="postHandler('p')")
+    //  button(type="button") +
+    //a(onclick="postHandler('m')")
+    //  button(type="button") -
+    //a(onclick="postHandler('r')")
+    //  button(type="button") Reset
+    //a(onclick="main()")
+    //  button(type="button") Start

@@ -1,13 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  <form name="regform" action="/registeruser" method="POST">
-  Username: <input type="text" name="username">
-  Password: <input type="password" name="password">
-  <button type="submit" id="submitbutton">Register</button>
-  </form>
+  h1= "Tug of War!"
   a(href='/game') Game
+  br
   br
   a(href='/client') Client

@@ -1,16 +1,18 @@
 head
   link(rel='stylesheet', href='/stylesheets/client.css')
-  script(type='text/javascript', src='/javascripts/client.js')
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(type='text/javascript', src='/javascripts/client.js')
+  //Disables zooming on mobile-devices. Hopefully...
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
 
 body
   h1(id="banner", onclick="changeTeam()") Choose team!
   div#pinkBox(onclick="chooseTeam('p')")
     div.middle
       div.inner
-        p#pinkBoxText Pink
+        //p#pinkBoxText Pink
 
   div#blueBox(onclick="chooseTeam('b')")
     div.middle
       div.inner
-        p#blueBoxText Blue
+        //p#blueBoxText Blue
