@@ -4,23 +4,26 @@
 
 function setTeam(teamColor) {
     var oppositeTeamColor = null;
+    var oppositeTeamHex = null;
+    var teamHex = null;
     var operator = null;
     if (teamColor == "pink") {
         oppositeTeamColor = "blue";
+        oppositeTeamHex = "#0D2331";
         operator = "p";
     } else {
         oppositeTeamColor = "pink";
+        teamHex = "#EB1E56";
         operator = "m";
     }
 
     $("#"+ teamColor +"Box").css("display", "block");
-    //document.getElementById(teamColor + "Box").style.display = 'block';
 
     document.getElementById(teamColor + "Box").style.height = "100%";
     document.getElementById(oppositeTeamColor + "Box").style.display = 'none';
-    //document.getElementById(teamColor + "Box").onclick = post("m");
     document.getElementById(teamColor + "Box").setAttribute("onClick", "post('" + operator + "');");
     document.getElementById("banner").innerHTML = 'Change Team';
+    document.getElementById("banner").style.backgroundColor = teamHex;
 }
 
 //////////////////////////

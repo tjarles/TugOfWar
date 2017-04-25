@@ -1,0 +1,89 @@
+.container {
+    height: 100vh;
+    display: flex;
+}
+
+.section {
+    width: 0%;
+    height: 100%;
+    position: relative;
+}
+
+.section-contents {
+    height: 100vh;
+    width: 10px;
+    margin: 0 auto;
+    background-color: #EB1E56;
+    transition: width 0.3s ease-out;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 30vh;
+    position: relative;
+}
+
+.section-contents .wave-left-a {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height:100vh;
+    width: 10px;
+
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    background-image:
+            radial-gradient(circle at -5px 10px, transparent 12px, #EB1E56 13px);
+    transform:scaleY(30);
+
+    animation:wave 5s linear infinite;
+}
+.section-contents .wave-left-b {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height:100vh;
+    background-repeat: repeat;
+    width: 15px;
+    background-size: 20px 40px;
+    background-image:
+            radial-gradient(circle at 15px 10px, #EB1E56 12px, transparent 13px);
+    transform:scaleY(30);
+
+    animation:wave 5s linear infinite;
+}
+.section-contents .wave-right-a {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height:100vh;
+    width: 10px;
+
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    background-image:
+            radial-gradient(circle at 15px 10px, transparent 12px, #EB1E56 13px);
+    transform:scaleY(30);
+
+    animation:wave 5s linear infinite;
+}
+.section-contents .wave-right-b {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height:100vh;
+    background-repeat: repeat;
+    width: 15px;
+    background-size: 20px 40px;
+    background-image:
+            radial-gradient(circle at 0px 10px, #EB1E56 12px, transparent 13px);
+    transform:scaleY(30);
+
+    animation:wave 5s linear infinite;
+}
+
+@keyframes wave {
+    from { background-position:0px 0px; }
+    to { background-position:0px 240px; }
+}
+
+*{box-sizing:border-box;}
+body{margin:0;}

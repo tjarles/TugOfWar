@@ -2,15 +2,22 @@
  * Created by tjarles on 2017-04-17.
  */
 
+//in milliseconds
+var refreshRate = 1000;
 
 function moveLine(value) {
     var widthToSet = value * 2;
-    document.getElementById("pink").style.width = widthToSet+"%";
+    //document.getElementById("pink").style.width = widthToSet+"%";
+    $("#pink").animate({
+        width: widthToSet + "%"
+    }, 50);
+    /*$(".section").animate({
+        width: widthToSet*2 + "%"
+    }, 50);*/
 }
 
 function win(team) {
-    clearTimeout(timer);
-    console.log(team + " win");
+    //console.log(team + " win");
     $("#winningTeam").show();
     $("#winningTeam").text(team + " team wins!");
 }
@@ -23,6 +30,8 @@ function countdown() {
         if (timer === 0) {
             $('#countdownNr').hide();
             clearInterval(interval);
+            //Resets counter
+            postHandler("r");
             main();
         }
     }, 1000);
@@ -52,7 +61,8 @@ function postHandler(data) {
 }
 
 function main() {
-    console.log("now in main")
+    //console.log("now in main");
+
     timer = 0;
     var currentWidth = document.getElementById("pink").style.width;
     //remove percentage
@@ -69,15 +79,12 @@ function main() {
     }
     postHandler("g");
 
-    timer = setTimeout(main, 1000);
+    timer = setTimeout(main, refreshRate);
 }
 
 $(document).ready(function() {
     countdown();
 });
-
-//var interval = null;
-//interval = window.setInterval(main, 1/60);
 
 
 

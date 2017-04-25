@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+//25 seems good
 var startingValue = 25;
 var count = startingValue;
 

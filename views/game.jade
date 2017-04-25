@@ -1,12 +1,20 @@
 head
   link(rel='stylesheet', href='/stylesheets/game.css')
+  link(rel='stylesheet', href='/stylesheets/waves.css')
   script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
   script(type='text/javascript', src='/javascripts/game.js')
 
 body
-  h1#countdownNr.centerText #{countdownNr}
-  h1.centerText.bounce #{winningTeam}
   div#pink
+    div.section
+      div.section-contents
+        div.wave-left-a(style="animation-delay:0.1s;")
+        div.wave-left-b(style="animation-delay:0.1s;")
+        div.wave-right-a(style="animation-delay:0.3s;")
+        div.wave-right-b(style="animation-delay:0.3s;")
+  div#centerWrapper.centerText
+    h1#countdownNr #{countdownNr}
+    h1#winningTeam.bounce #{winningTeam}
     //h1#pinkPlayerCount=
     //h1= "pink square/team"
     ////For testing
